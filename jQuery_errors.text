@@ -1,0 +1,12 @@
+1. Uncaught ReferenceError: jQuery is not defined
+solve :- यह प्रोबेल्म तब आता हाउ जब हम jQuery file को import करने से पहले कोई और .js file  को import कर देते है इसलिए ऐसा error आने पर किसी और js file को import करने से पहले jQuery.js को import करना चाहिए |
+
+२. Uncaught TypeError: $(...).dataTable is not a function
+    at HTMLDocument.<anonymous> (message:1037)
+    at mightThrow (jquery.js:3762)
+    at process (jquery.js:3830)
+
+solve:- यह समस्या datatable  का use पर आती है, क्यों आती है ये तो मुझे भी नहि पता लेकिन इसे हम defer का use कर हटा    सकते है| बस js file import करते वक्त <script> tag मे last मे defer लगाना है |
+    syntax:-     <script src="file path/" defer></script>
+    ex:-     <script src="{!! asset('admin/js/jquery.dataTables.min.js') !!}" defer></script>
+
