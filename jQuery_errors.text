@@ -10,3 +10,19 @@ solve:- यह समस्या datatable  का use पर आती है,
     syntax:-     <script src="file path/" defer></script>
     ex:-     <script src="{!! asset('admin/js/jquery.dataTables.min.js') !!}" defer></script>
 
+3. लारवेल या किसी अन्य वेब्पेग में किसी आइटम को सेलेक्ट क्र किसी एनी जगह दिखने के लिए हम Jquery  का उसे क्र सकते है
+
+<script>
+                $(document).ready(function () {
+                    $(".chbx").click(function() {
+                        var text = "";
+                        $(".chbx:checked").each(function() {
+                            text+=$(this).val()+',';
+                        });
+                        text=text.substring(0,text.length-1);
+                        $(".s_text").val(text);
+                        // var count = $("[type='checkbox']:checked").length;
+                        // $("#count").val($("[type='checkbox']:checked").length);
+                    });
+                });
+            </script>
